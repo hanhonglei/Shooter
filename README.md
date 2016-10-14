@@ -8,3 +8,4 @@ It has many typical game features as list below:
 -Adding interactive items
 -Dropping random items
 -UI
+--
