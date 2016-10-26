@@ -9,7 +9,7 @@ public class EnemySight : MonoBehaviour
     public static Vector3 resetPos = Vector3.back;
 
 
-    private NavMeshAgent nav;                       // Reference to the NavMeshAgent component.
+    private UnityEngine.AI.NavMeshAgent nav;                       // Reference to the NavMeshAgent component.
     private SphereCollider col;                     // Reference to the sphere collider trigger component.
     //private Animator anim;                          // Reference to the Animator.
     //private LastPlayerSighting lastPlayerSighting;  // Reference to last global sighting of the player.
@@ -23,7 +23,7 @@ public class EnemySight : MonoBehaviour
     void Awake()
     {
         // Setting up the references.
-        nav = transform.GetComponentInParent<NavMeshAgent>();
+        nav = transform.GetComponentInParent<UnityEngine.AI.NavMeshAgent>();
         col = GetComponent<SphereCollider>();
         //anim = GetComponent<Animator>();
         //lastPlayerSighting = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<LastPlayerSighting>();
@@ -121,7 +121,7 @@ public class EnemySight : MonoBehaviour
     float CalculatePathLength(Vector3 targetPosition)
     {
         // Create a path and set it based on a target position.
-        NavMeshPath path = new NavMeshPath();
+        UnityEngine.AI.NavMeshPath path = new UnityEngine.AI.NavMeshPath();
         if (nav.enabled)
             nav.CalculatePath(targetPosition, path);
 

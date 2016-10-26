@@ -20,8 +20,6 @@ public class LevelManager : MonoBehaviour {
         Debug.Log(Random.seed);
         player = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<Actor>();
         gameInfo = GameObject.Find("Text").GetComponent<Text>();
-        lm = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<LevelManager>();
-
 	} 
 	
 	// Update is called once per frame

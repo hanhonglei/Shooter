@@ -14,7 +14,7 @@ public class EnemyBehavior : Actor {
     
     
     private EnemySight enemySight;                          // Reference to the EnemySight script.
-    private NavMeshAgent nav;                               // Reference to the nav mesh agent.
+    private UnityEngine.AI.NavMeshAgent nav;                               // Reference to the nav mesh agent.
     private Transform player;                               // Reference to the player's transform.
     //private PlayerHealth playerHealth;                      // Reference to the PlayerHealth script.
     //private LastPlayerSighting lastPlayerSighting;          // Reference to the last global sighting of the player.
@@ -56,7 +56,7 @@ public class EnemyBehavior : Actor {
         // Setting up the references.
         enemySight = transform.Find("EnemySight").GetComponent<EnemySight>();
         Debug.Assert(enemySight);
-        nav = GetComponent<NavMeshAgent>();
+        nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag(Tags.player).transform;
         lm = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<LevelManager>();
         //Debug.Log(player);
