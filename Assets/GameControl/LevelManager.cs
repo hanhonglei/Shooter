@@ -16,8 +16,7 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Random.seed = System.Environment.TickCount;
-        Debug.Log(Random.seed);
+        Random.InitState(System.Environment.TickCount);
         player = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<Actor>();
         gameInfo = GameObject.Find("Text").GetComponent<Text>();
 	} 
