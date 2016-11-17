@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulleTutorial : MonoBehaviour {
+public class BulleTutorial : MonoBehaviour
+{
 
     private Rigidbody rb;
     private bool bMove = true;

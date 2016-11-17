@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponTutorial : MonoBehaviour {
+public class WeaponTutorial : MonoBehaviour
+{
     public GameObject bullet = null;
     public Transform bulletPos = null;
     public float freezeTime = 1f;
@@ -36,7 +37,7 @@ public class WeaponTutorial : MonoBehaviour {
         Vector3 bulletStartPos = bulletPos.position;
         bulletStartPos.y = 1;
         GameObject g = (GameObject)GameObject.Instantiate(bullet, bulletStartPos, Quaternion.FromToRotation(Vector3.forward, xyProject.normalized));
-       num--;
+        num--;
         lastShootTime = 0f;
     }
     public void StopFire()
