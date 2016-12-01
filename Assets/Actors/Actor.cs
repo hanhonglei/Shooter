@@ -83,7 +83,7 @@ public class Actor : MonoBehaviour
 
     }
 
-    // 由子弹脚本调用，造成当前角色的伤害
+    // called by the bullet script, cause damage to this object
     virtual public void Damage(float damage)
     {
         health -= damage;

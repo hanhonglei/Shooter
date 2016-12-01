@@ -23,7 +23,6 @@ public class EnemyDropItemProc : MonoBehaviour {
     {
         if (Random.Range(0f, 1f) < dropItemPer)
         {
-            Debug.Log("Drop an item");
             return levelManager.GenerateRandomItem(transform);
         }
         return null;

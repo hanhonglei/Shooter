@@ -36,24 +36,25 @@ public class LevelManager : MonoBehaviour {
         Debug.Log("Random number:" + r);
         int itemLevel = (int)currentLevel;
         int enemyLevel = (int)dropper.gameObject.GetComponent<EnemyDropItemProc>().enemyLevel;
-        if (r < 0.8)    // 八成的概率选择和这个物体相匹配的掉落物品
+        if (r < 0.8)        // There is 80% to generate the same level item
         {
             itemLevel = enemyLevel;
         }
-        else if (r < 0.9)    // 高一个级别的掉落物品
+        else if (r < 0.9)    // 10% to generate 1 higher level item
         {
             itemLevel += 1;
         }
-        else if (r < 0.95)   // 再高一个级别的掉落物品
+        else if (r < 0.95)   // 5% to generate 2 higher level item
         {
             itemLevel += 2;
         }
-        else if (r < 0.96)   // 
+        else if (r < 0.96)   // 1% to generate particular, means special, level item
         {
             itemLevel = (int)ItemLevel.Particular;
         }
         else
             return null;
+        // if the enemy itself is special level, it has more opportunity to drop special item
         if (enemyLevel == (int)ItemLevel.Particular)
         {
             if (Random.value < 0.33)
