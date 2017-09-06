@@ -12,4 +12,6 @@ It has many typical game features as list below:
 - Dropping random items
 - UI
 
---
+----
+
+- This project is under [GNU GENERAL PUBLIC LICENSE](https://www.gnu.org/licenses/), please check it in the root folder.
