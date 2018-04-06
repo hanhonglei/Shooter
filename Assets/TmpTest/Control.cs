@@ -19,7 +19,7 @@ public class Control : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100))
             {
-                hit.transform.gameObject.SendMessage("Hit", Input.mousePosition);
+                hit.transform.gameObject.SendMessage("Hit", Input.mousePosition, SendMessageOptions.DontRequireReceiver);
                 //hit.transform.gameObject.SendMessage("Hit");
             }
 
