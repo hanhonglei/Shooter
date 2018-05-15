@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 public class PlayerControl : Actor
 {
@@ -86,7 +87,11 @@ public class PlayerControl : Actor
     protected override void Die()
     {
         gameObject.SetActive(false);
-        Application.Quit();
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+	Application.Quit();
+#endif
     }
     bool NextWeapon(int next)
     {
